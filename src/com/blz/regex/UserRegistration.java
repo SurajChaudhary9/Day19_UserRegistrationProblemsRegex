@@ -1,5 +1,5 @@
 /**
- *@PROBLEM_STATEMENT : UC1
+ *@PROBLEM_STATEMENT : UC2
  * As a User need to enter a valid First Name
  *First name starts with Cap and has minimum 3 character
  *
@@ -12,16 +12,15 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * @Purpose :check for last name validity
+ * @Param :Name, Regex, Matches
+ * @Function :take i/p and compare
+ * @Return :no return
+ */
 public class UserRegistration {
-	static Scanner scanner = new Scanner(System.in);
 
-	/**
-	 * @Purpose : Take First Name And Check It Is Getting Matched With Regex/Regular
-	 *          Expression Or Not
-	 * @Param : Name, Regex
-	 * @Function : check for first name validity
-	 * @Return : string results
-	 */
+	static Scanner scanner = new Scanner(System.in);
 
 	public static void validFirstName() {
 
@@ -34,10 +33,33 @@ public class UserRegistration {
 		boolean r = m.matches();
 
 		if (r)
-			System.out.println("First name is valid");
+			System.out.println("It Is A Valid First Name");
 		else
-			System.out.println("First name is !Invalid");
+			System.out.println("It Is Invalid First Name");
 
 	}
 
+	/**
+	 * @Purpose :check for last name validity
+	 * @Param :Name, Regex, Matches
+	 * @Function :take i/p and compare
+	 * @Return :no return
+	 */
+
+	public static void validLastName() {
+
+		System.out.println("Enter Last Name:");
+		String lname = scanner.next();
+		String regex = "^[A-Z]{1}[a-z]{2,}$";
+
+		Pattern p = Pattern.compile(regex);
+		Matcher m = p.matcher(lname);
+		boolean r = m.matches();
+
+		if (r)
+			System.out.println("It Is A Last Name");
+		else
+			System.out.println("It Is Invalid Last name");
+
+	}
 }
