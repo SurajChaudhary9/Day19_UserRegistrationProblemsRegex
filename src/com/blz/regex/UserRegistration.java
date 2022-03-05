@@ -1,8 +1,6 @@
 /**
- *@PROBLEM_STATEMENT : UC2
- * As a User need to enter a valid First Name
- *First name starts with Cap and has minimum 3 character
- *
+ *@PROBLEM_STATEMENT : UC3
+ * As a User need to enter a valid email
  *@author Suraj Chaudhary
  *@Date 04-Mar-2022
  */
@@ -60,6 +58,31 @@ public class UserRegistration {
 			System.out.println("It Is A Last Name");
 		else
 			System.out.println("It Is Invalid Last name");
+	}
+
+	/**
+	 * @Purpose :check for email validity
+	 * @Param :Name, Regex, Matches
+	 * @Function :take i/p and compare
+	 * @Return :no return
+	 */
+
+	public static void validEmail() {
+
+		System.out.println("Enter E-mail:");
+		String email = scanner.next();
+
+		String regex = "^[a-zA-Z0-9]+([.][A-Za-z]+)*@[a-zA-Z]+[.]+[a-zA-Z]{2,3}+([.][A-Za-z]+)*$";
+		;
+
+		Pattern p = Pattern.compile(regex);
+		Matcher m = p.matcher(email);
+		boolean r = m.matches();
+
+		if (r)
+			System.out.println("Valid Email Address");
+		else
+			System.out.println("Email Address is Invalid");
 
 	}
 }
