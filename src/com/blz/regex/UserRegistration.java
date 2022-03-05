@@ -38,7 +38,7 @@ public class UserRegistration {
 	}
 
 	/**
-	 * @Purpose :check for last name validity
+	 * @Purpose :check for phone no validity
 	 * @Param :Name, Regex, Matches
 	 * @Function :take i/p and compare
 	 * @Return :no return

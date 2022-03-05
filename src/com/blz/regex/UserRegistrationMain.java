@@ -33,6 +33,7 @@ public class UserRegistrationMain {
 
 			case 3:
 				UserRegistration.validEmail();
+				break;
 			case 4:
 				UserRegistration.validMobileNumber();
 				break;
