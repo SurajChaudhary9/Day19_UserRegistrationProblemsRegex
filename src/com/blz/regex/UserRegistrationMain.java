@@ -1,9 +1,6 @@
 /**
- *@PROBLEM_STATEMENT : UC3
- * As a User need to enter a valid First,Last Name And Email
- * First name starts with Cap and has minimum 3 characters And Email
- * E.g. abc.xyz@bl.co.in - Email has 3 mandatory parts (abc, bl
- * & co) and 2 optional (xyz & in) with precise @ and . positions
+ *@PROBLEM_STATEMENT : UC4
+ *Mobile Format - E.g. 91 9919819801 - Country code follow by space and 10 Digit Number
  *@author Suraj Chaudhary
  *@Date 04-Mar-2022
  */
@@ -36,7 +33,10 @@ public class UserRegistrationMain {
 
 			case 3:
 				UserRegistration.validEmail();
+			case 4:
+				UserRegistration.validMobileNumber();
 				break;
+
 			}
 		}
 	}
