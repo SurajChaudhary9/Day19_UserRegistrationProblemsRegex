@@ -1,5 +1,6 @@
 /**
- *@PROBLEM_STATEMENT : UC4
+ *@PROBLEM_STATEMENT : UC5
+ *As a User need to follow pre -defined Password rules. Rule1 – minimum 8 Characters - NOTE – All rules must be passed
  * As a User need to enter a valid mobile number
  *@author Suraj Chaudhary
  *@Date 04-Mar-2022
@@ -97,5 +98,25 @@ public class UserRegistration {
 			System.out.println("Phone Number is Valid");
 		else
 			System.out.println("Phone Number is Invalid");
+
+	}
+
+	/**
+	 * @Purpose :check for password min 8 char
+	 * @Param :Name, Regex, Matches
+	 * @Function :take i/p and compare
+	 * @Return :no return
+	 */
+	public static void validPasswordOne() {
+		System.out.print("Enter The Password Atleast Eight Character : ");
+		String passWord = scanner.nextLine();
+		String regex4 = "^[A-Z a-z 0-9]{8,}$";
+		Pattern p4 = Pattern.compile(regex4);
+		Matcher m4 = p4.matcher(passWord);
+		boolean r4 = m4.matches();
+		if (r4)
+			System.out.println("Password is Valid");
+		else
+			System.out.println("Password is Invalid");
 	}
 }

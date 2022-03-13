@@ -1,6 +1,6 @@
 /**
- *@PROBLEM_STATEMENT : UC4
- *Mobile Format - E.g. 91 9919819801 - Country code follow by space and 10 Digit Number
+ *@PROBLEM_STATEMENT : UC5
+ *Password Min 8 char
  *@author Suraj Chaudhary
  *@Date 04-Mar-2022
  */
@@ -37,7 +37,9 @@ public class UserRegistrationMain {
 			case 4:
 				UserRegistration.validMobileNumber();
 				break;
-
+			case 5:
+				UserRegistration.validPasswordOne();
+				break;
 			}
 		}
 	}
