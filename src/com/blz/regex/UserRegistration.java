@@ -1,7 +1,6 @@
 /**
- *@PROBLEM_STATEMENT : UC5
- *As a User need to follow pre -defined Password rules. Rule1 – minimum 8 Characters - NOTE – All rules must be passed
- * As a User need to enter a valid mobile number
+ *@PROBLEM_STATEMENT : UC6
+ *One upper case
  *@author Suraj Chaudhary
  *@Date 04-Mar-2022
  */
@@ -115,6 +114,26 @@ public class UserRegistration {
 		Matcher m4 = p4.matcher(passWord);
 		boolean r4 = m4.matches();
 		if (r4)
+			System.out.println("Password is Valid");
+		else
+			System.out.println("Password is Invalid");
+	}
+
+	/**
+	 * @Purpose :check for password One upper case
+	 * @Param :Name, Regex, Matches
+	 * @Function :take i/p and compare
+	 * @Return :no return
+	 */
+
+	public static void validPassRule2() {
+		System.out.print("Enter the Password Atleast One Upper Case & Eight Character :");
+		String passWord1 = scanner.nextLine();
+		String regex5 = "^[A-Z]{1}+[a-zA-z0-9]{7,}$";
+		Pattern p5 = Pattern.compile(regex5);
+		Matcher m5 = p5.matcher(passWord1);
+		boolean r5 = m5.matches();
+		if (r5)
 			System.out.println("Password is Valid");
 		else
 			System.out.println("Password is Invalid");
